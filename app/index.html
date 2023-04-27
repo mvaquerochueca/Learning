@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/cascadia-code');
+        </style>
+        <script
+            src="https://kit.fontawesome.com/784ba43a3d.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mario Vaquero</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="register page container off">
+            <form class="form">
+                <span class="title">Sing Up</span>
+                <span class="subtitle"
+                    >Create a free account with your email</span
+                >
+                <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                />
+                <input
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                />
+                <input
+                    class="input"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                />
+                <div class="tooltip">
+                    <span
+                        class="icon"
+                        data-title="
+                        Have  8 characters minium 
+                        Have one number 
+                        Have one symbol 
+                        Have one uppercase letter
+                        Have one lowercase letter"
+                    >
+                        <i class="fa-solid fa-circle-info" title="hello"></i>
+                    </span>
+                </div>
+                <button class="button" type="submit">Sing up</button>
+            </form>
+
+            <div class="form-section">
+                <p>Have an account? <a href="">Sign In</a></p>
+            </div>
+        </div>
+
+        <div class="login page container off">
+            <form class="form">
+                <span class="title">Sign In</span>
+
+                <input
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                />
+                <input
+                    class="input"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                />
+                <button class="button" type="submit">Login</button>
+            </form>
+
+            <div class="form-section">
+                <label for=""
+                    ><input type="checkbox" class="checkbox" />Remember
+                    me</label
+                >
+                <p>You do not have an account?</p>
+                <a href="">Sign Up</a>
+            </div>
+        </div>
+
+        <div class="home off">
+            <header class="home-header">
+                <button class="button-home button">Home</button>
+
+                <nav class="home-header-nav">
+                    <div class=".home-header-avatar-img-user {">
+                        <img class="home-header-avatar" src="" alt="" />
+                    </div>
+                    <div class="link-profile">
+                        <a href="" class="link-profile">Profile</a>
+                    </div>
+                </nav>
+                <div class="btn-container-header-logout">
+                    <button class="btn-logout button">Logout</button>
+                </div>
+            </header>
+
+            <section class="profile off" id="profile-section">
+                <div class="container">
+                    <form class="form profile-avatar-form">
+                        <span>Update avatar</span>
+                        <input
+                            class="input"
+                            type="url"
+                            name="url"
+                            placeholder="Url"
+                        />
+                        <button class="button" type="submit">Update</button>
+                    </form>
+                </div>
+
+                <div class="container">
+                    <form class="form profile-password-form">
+                        <span class="subtitle">Update password</span>
+                        <input
+                            class="input"
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                        />
+                        <input
+                            class="input"
+                            type="password"
+                            name="newPassword"
+                            placeholder="New Password"
+                        />
+                        <input
+                            class="input"
+                            type="password"
+                            name="newPasswordConfirm"
+                            placeholder="New Password Confirmation"
+                        />
+                        <button
+                            class="button-upadte-new-password"
+                            type="submit"
+                        >
+                            Update
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="add-post container off">
+                <form class="modal-add-post">
+                    <h3>Create Post</h3>
+                    <input
+                        type="file"
+                        name="file"
+                        id=""
+                        onChange="previewImage()"
+                        accept=".jpg, .jpeg, .png, .webp"
+                    />
+                    <textarea
+                        class="input"
+                        name="text"
+                        cols="30"
+                        rows="10"
+                        placeholder="text"
+                    ></textarea>
+
+                    <div>
+                        <button class="button-create" type="submit">
+                            Create
+                        </button>
+                        <button class="button-cancel" type="cancel">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="edit-post container off">
+                <form class="modal-update-post">
+                    <h3>Update Post</h3>
+                    <input
+                        class="input-modal-url"
+                        type="hidden"
+                        name="postId"
+                    />
+                    <input
+                        type="file"
+                        name="file"
+                        id=""
+                        accept=".jpg, .jpeg, .png, .webp"
+                    />
+                    <textarea
+                        class="input"
+                        name="text"
+                        cols="30"
+                        rows="10"
+                        placeholder="text"
+                    ></textarea>
+
+                    <div>
+                        <button class="button-create" type="submit">
+                            Update
+                        </button>
+                        <button class="button-cancel" type="cancel">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="post-list">
+                <!-- TODO implement me! -->
+            </section>
+
+            <footer class="home-footer">
+                <div class="btn-post-container-footer">
+                    <button class="add-post-button">+</button>
+                </div>
+            </footer>
+        </div>
+
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
